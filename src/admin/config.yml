@@ -8,20 +8,9 @@ media_folder: "src/assets/images" # Folder where user uploaded files should go
 public_folder: "assets/images"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "affiliates" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Affiliates" # Used in the UI, ie.: "New Post"
-    folder: "src/my_collections/_affiliates" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Logo", name: "logo", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Blog Posts" # Used in the UI, ie.: "New Post"
-    folder: "src/my_collections/_posts" # The path to the folder where the documents are stored
+    folder: "src/my_collections/blog/_posts" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -41,24 +30,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Include Left Aside", name: "left-aside", widget: "boolean", default: true}
       - {label: "Include Top Right Aside", name: "right-aside-top", widget: "boolean", default: true}
       - {label: "Include Bottom Right Aside", name: "right-aside-bottom", widget: "boolean", default: true}
-      - {label: "Body", name: "body", widget: "markdown"}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-  - name: "classes" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Classes" # Used in the UI, ie.: "New Post"
-    folder: "src/my_collections/_classes" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Location Name", name: "location", widget: "string"}
-      - {label: "Google Map Link", name: "google-map-link", widget: "string"}
-      - label: "Dates"
-        name: "dates"
-        widget: "list"
-        field:
-          - {label: "Date", name: "date", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
@@ -162,37 +133,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown", required: false}
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-  - name: "services" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Services" # Used in the UI, ie.: "New Post"
-    folder: "src/my_collections/_services" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Display Title", name: "display-title", widget: "boolean", default: true}
-      - {label: "Publish Date/Time", name: "date", widget: "datetime", default: ""}
-      - {label: "Featured Image", name: "image", widget: "string", required: false}
-      - {label: "Featured Image Alt Text", name: "image-alt", widget: "string", required: false}
-      - {label: "Categories", name: categories, widget: list, required: false}
-      - {label: "Tags", name: tags, widget: list, required: false}
-      - {label: "Include Left Aside", name: "left-aside", widget: "boolean", default: true}
-      - {label: "Include Top Right Aside", name: "right-aside-top", widget: "boolean", default: true}
-      - {label: "Include Bottom Right Aside", name: "right-aside-bottom", widget: "boolean", default: true}
-      - {label: "Body", name: "body", widget: "markdown"}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-  - name: "social" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Social Share and Follow" # Used in the UI, ie.: "New Post"
-    folder: "src/my_collections/_social" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}"
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "URL", name: "platform-url", widget: "string"}
-      - {label: "Font Awesome Icon", name: "font-awesome-icon", "widget: string"}
   - name: "testimonials" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Testimonials" # Used in the UI, ie.: "New Post"
     folder: "src/my_collections/_testimonials" # The path to the folder where the documents are stored
