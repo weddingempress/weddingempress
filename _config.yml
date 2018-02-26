@@ -12,8 +12,8 @@ author:
   bio:
 
 company:
-  name:
-  location:
+  name: Wedding Empress
+  location: Portland, OR
   logo:
   phone:
 
@@ -26,8 +26,8 @@ snipcart:
   apikey: N2Y3MWQwYTktZjYyNi00NzZkLWI3ZTEtMjQ5MWZjODY0ODg2NjM2NTUyNzMyNjE0Mjk5NDI0
 
 analytics:
-  google:
-  hotjar:
+  google: UA-114777871-1
+  hotjar: 794174
   momently:
 
 mailchimp:
