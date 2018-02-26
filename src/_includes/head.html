@@ -32,8 +32,10 @@
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.url }}/blog/feed.xml" />
 
+  {% include snipcart.html %}
+
   <!-- Hotjar Tracking Code -->
-  <!-- <script>
+  <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
         (h.hj.q = h.hj.q || []).push(arguments)
@@ -49,5 +51,5 @@
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
-  <script src="//s3-us-west-2.amazonaws.com/momently-static/loader/{{ site.analytics.momently }}_momently.js" name="momently-script"></script> -->
+  <script src="//s3-us-west-2.amazonaws.com/momently-static/loader/{{ site.analytics.momently }}_momently.js" name="momently-script"></script>
 </head>

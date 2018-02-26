@@ -22,6 +22,9 @@ fav-icon:
 
 cloudinary-name:
 
+snipcart:
+  apikey: N2Y3MWQwYTktZjYyNi00NzZkLWI3ZTEtMjQ5MWZjODY0ODg2NjM2NTUyNzMyNjE0Mjk5NDI0
+
 analytics:
   google:
   hotjar:
