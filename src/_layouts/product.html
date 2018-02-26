@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="post content" itemid="{{ site.url }}/{{ page.url }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+  <meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
+  <header class="post-header uk-text-center">
+    {% include post-image.html %}
+    <h1 class="uk-h1 uk-margin-medium-top uk-margin-remove-bottom" itemprop="name headline">{{ page.title | markdownify | markdownify | replace: '<p>', '' | replace: '</p>', '' | widont }}</h1>
+    <hr class="uk-divider-small" />
+    <p class="post-meta uk-margin-remove">
+      <i>by</i>
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">{{ site.author.name }}</span></span>
+      <i>on</i>
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    <p class="uk-text-center italic">
+      {% assign words = page.content | number_of_words %}
+      <span class="visuallyhidden" itemprop="wordCount">{{ words }}</span> {% if words
+      < 360 %} 1 minute {% else %} {{ words | divided_by:180 }} minute {% endif %} read </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+    <button class="uk-button uk-button-primary"
+        class="snipcart-add-item"
+        data-item-id="{{ page.product-id }}"
+        data-item-name="{{ page.title }}"
+        data-item-price="{{ page.product-price}}"
+        data-item-url="{{ site.url }}{{ page.url }}"
+        data-item-description="{{ page.description}}">
+            {{ page.button-text }}
+    </button>
+  </div>
+</article>

@@ -1,5 +1,5 @@
-title:
-description:
+title: Wedding Empress
+description: DIY Printable and Couture Wedding Invitations
 
 url: http://localhost:3000
 repository:
@@ -73,7 +73,7 @@ lsi: false
 # limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: blog/:year/:month/:title/
+permalink: :categories/:title/
 
 # Markdown library and options
 markdown: kramdown
@@ -124,12 +124,31 @@ defaults:
       right-aside-bottom: false
   -
     scope:
-      path: "_posts"      # empty string for all files
+      path: ""
+      type: posts      # empty string for all files
     values:
       layout: post
       is-post: true
       comments: false
       comments-locked: true
+  -
+    scope:
+      path: "wedding/placecards/_posts"
+    values:
+      layout: product
+      is-post: true
+      comments: false
+      comments-locked: true
+  -
+    scope:
+      path: "blog/_posts"      # empty string for all files
+    values:
+      layout: post
+      permalink:  blog/:year/:month/:title
+      is-post: true
+      comments: false
+      comments-locked: true
+
 
 ############################################################
 # Site configuration for the Auto-Pages feature

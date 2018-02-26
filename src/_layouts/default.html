@@ -7,58 +7,16 @@
   <div class="wrap">
     <h1 class="visuallyhidden">{{ page.title }} | {% if page.title != site.title %}
   {{ site.title }} | {% endif %} </h1>
-    <a id="top"></a> {% if page.homepage %}
-    <div class="stripes">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    {% include header/hero.html %} {% else %} {% include header/nav.html %} {% endif %}
+    <a id="top"></a>
+  {% include header/nav.html %}
     <div class="uk-container uk-container-expand site">
       <div class="uk-child-width-expand@s uk-grid-large uk-flex site-content" uk-grid>
-        <div>
-          <div class="uk-grid-large" uk-grid>
-            <main class="uk-width-1-2@xl uk-width-1-1@l uk-width-1-1@m uk-width-1-1@s">
-              <div class="paper main-paper">
-                {% include main-content.html %}
-              </div>
-            </main>
-            <aside class="uk-width-2-5@xl uk-width-1-3@l uk-visible@xl content uk-flex uk-flex-between uk-flex-column">
-            {% unless page.right-aside-top == false %}
-            {% include aside/right-aside.html %}
-            {% endunless %}
-          </aside>
-            <div class="uk-width-1-2@xl uk-width-1-1@l uk-width-1-1@m uk-width-1-1@s uk-margin-remove">
-              {% if page.is-post %}
-              <div class="paper main-paper">
-                {% unless page.cta == "" %}
-                <p>{{ page.cta }}</p>
-                {% endunless %}
-                {% if page.lead-id %}
-                {% include lead/lead-box.html %}
-                {% endif %}
-                <div class="uk-hidden@xl">
-                  {% include post-lists/related-posts.html %}
-                </div>
-                {% if page.comments == true %}
-                {% include comments/list-of-comments.html %}
-                {% endif %}
-              </div>
-              {% endif %}
-            </div>
-            <aside class="uk-width-2-5@xl uk-width-1-3@l uk-visible@xl content uk-margin-remove-top">
-              <div style="z-index:80;" uk-sticky="bottom: true; offset: 150;">
-              {% unless page.right-aside-bottom == false %}
-              {% include aside/right-aside-bottom.html %}
-              {% endunless %}
-              </div>
-            </aside>
 
-        </div>
-      </div>
+        {% if page.homepage %}
+          {% include home.html %}
+        {% else %}
+      {% include single-page.html %}
+      {% endif %}
       <div class="uk-width-1-1@s uk-width-1-1@m uk-width-1-3@l uk-width-1-5@xl uk-flex-first@s">
         {% unless page.left-aside == false %}
         {% include aside/left-aside.html %}
