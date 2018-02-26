@@ -1,0 +1,15 @@
+<div class="uk-grid uk-grid-collapse">
+  <div class="uk-width-1-3">
+    <p class="grey sans-serif">
+    Follow:
+    </p>
+  </div>
+  <div class="uk-width-2-3">
+    <ul class="uk-iconnav uk-text-center uk-margin-bottom">
+      {% assign socials = site.social | sort:"order" %}
+      {% for social in socials | sort:"order" %}
+      <li class="uk-width-1-4"><a href="{{ social.platform-url }}"><i class="{{ social.font-awesome-icon }} fa-lg" aria-hidden="true"></i></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

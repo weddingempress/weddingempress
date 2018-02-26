@@ -1,0 +1,79 @@
+// /* Links: replicate underline that clears descenders */
+
+.uk-accordion-title:hover {
+  cursor: pointer;
+}
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+
+}
+
+
+p, .services, .uk-accordion-content,
+ul.related-posts,
+#respond {
+  a:hover,
+  a:link,
+  a:visited {
+    color: $black;
+    background: -webkit-linear-gradient($white, $white), -webkit-linear-gradient($white, $white), -webkit-linear-gradient($black, $black);
+    background: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($black, $black);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 $white, -0.03em 0 $white, 0 0.03em $white, 0 -0.03em $white, 0.06em 0 $white, -0.06em 0 $white, 0.09em 0 $white, -0.09em 0 $white, 0.12em 0 $white, -0.12em 0 $white, 0.15em 0 $white, -0.15em 0 $white;
+    background-position: 0 93%, 100% 93%, 0 93%;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    a:link {
+      background-position-y: 87%, 87%, 90%;
+    }
+  }
+
+  a:link::selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+  }
+
+  a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+  }
+}
+
+.comment a[itemprop*="url"],
+#respond a {
+  color: $grey !important;
+}
+
+.all-posts > li > a {
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid $white;
+  color: black;
+}
+
+.all-posts > li:nth-child(n+1) {
+  margin-top: none !important;
+  margin-bottom: 1.999em;
+}
+
+.all-posts > li:last-child {
+  margin-bottom: 0;
+}
+
+.button-in-text {
+  position: relative;
+  top: -3px;
+}
+
+.related-posts .uk-button {
+  margin-left: 1em;
+}
+
+.post-link, .post-link:hover {
+  color: $black;
+}

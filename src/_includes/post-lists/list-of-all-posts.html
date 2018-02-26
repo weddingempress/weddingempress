@@ -1,0 +1,23 @@
+{% if page.auto-page %}
+<p class="uk-h2 uk-text-center uk-margin-remove small">Filed Under</p>
+<p class="uk-h1 uk-text-center">{{page.autopages.display_name | markdownify | replace: '<p>', '' | replace: '</p>', '' }}</p>
+<hr class="uk-margin-bottom"/>
+{% endif %}
+<ul class="uk-list all-posts">
+  {% for post in paginator.posts %}
+    <li>
+      <a class="post-link uk-text-center" href="{{ post.url | relative_url }}">
+        <img src="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_800/{{ post.image }}" srcset="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_320/{{ post.image }} 320w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_640/{{ post.image }} 640w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_960/{{ post.image }} 960w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_1100/{{ post.image }} 1100w" sizes="(min-width: 50rem) 50rem, 90vw" class="featured-image" alt="{{ post.image-alt }}" width="1100" height="732">
+        <h2 class="uk-h1 uk-margin-medium-top uk-margin-remove-bottom">{{ post.title | markdownify | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+        <hr class="uk-divider-small" />
+        <p class="post-meta"><i>by</i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author.name }}</span></span> <i>on</i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
+          </p>
+        <p class="excerpt uk-text-left">{{ post.content | strip_html | truncatewords: 50 }}&ensp;<button class="button-in-text uk-button uk-button-default uk-button-small"uk-icon="icon: arrow-right">More&ensp;</button></p>
+        </a>
+        {% if forloop.last == true %}
+  {% else %}
+      <hr />
+  {% endif %}
+    </li>
+  {% endfor %}
+</ul>

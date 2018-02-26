@@ -1,0 +1,112 @@
+.uk-navbar-nav > li > a {
+  font-family: $sans-serif;
+  text-transform: none;
+  color: $black;
+}
+
+.uk-navbar-nav > .uk-navbar-item > a {
+  font-size: 1.75em;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: transparent;
+  border-bottom: 1px solid $black;
+}
+@media screen and (min-width: 1600px) {
+  .uk-navbar-right-short {
+    margin-left: 11em;
+  }
+}
+
+.nav-logo {
+  height: 70px;
+  position: relative;
+  top: 2px;
+}
+
+.logo-wrap {
+  float: right;
+}
+
+.uk-navbar .uk-icon {
+  position: relative;
+  top: 3px;
+}
+
+.call {
+  font-family: $sans-serif;
+  font-size: 1.25em;
+  color: $black;
+  justify-content: flex-start;
+}
+
+.nav-logo-mini {
+  //height: 40px;
+  width: 82px;
+}
+//
+
+.nav-wrap {
+  position: relative;
+}
+.nav-wrap * {
+  z-index: 85;
+}
+
+.nav-wrap.uk-sticky-fixed {
+  border-bottom: 2px solid $red;
+}
+
+// .nav, .uk-offcanvas-bar {
+  // background-color: $background-color;
+  // background-image: $background-image;
+// }
+
+.granite-bg {
+  background-color: $background-color;
+  // background-image: $background-image;
+}
+
+.nav-transparent {
+  background-color: transparent;
+  background-image: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.nav-wrap {
+  z-index: 85;
+}
+
+.uk-navbar-item,
+.uk-navbar-nav > li > a,
+.uk-navbar-toggle {
+  padding: 0;
+  margin-right: 0.75em;
+}
+
+.uk-navbar-dropdown-nav {
+  font-size: 1rem;
+  font-family: $sans-serif;
+}
+
+.uk-navbar-dropdown-nav > li > a {
+  color: $black;
+}
+
+.uk-navbar-dropdown {
+  width: 261px;
+  border: 1px solid $red;
+  background-color: $background-color;
+  // background-image: $background-image;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  border-bottom: 0 !important;
+}
+
+@media screen and (min-width: 950px) and (max-width: 1000px) {
+  nav .uk-navbar-item {
+    font-size: 0.65em;
+  }
+}

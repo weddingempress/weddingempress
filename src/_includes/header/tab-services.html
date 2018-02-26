@@ -1,0 +1,7 @@
+<ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+  {% for service in site.services %}
+    <li><a><img class="service-icon" src="{{ service.image }}" alt="{{ service.image-alt-text }}" /> <p>
+      {{ service.title }}
+    </p></a></li>
+    {% endfor %}
+</ul>

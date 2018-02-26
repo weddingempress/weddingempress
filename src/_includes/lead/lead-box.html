@@ -1,0 +1,36 @@
+{% assign lead-type = page.lead-name %}
+
+<section id="leadBox" class="uk-margin-large-top uk-margin-large-bottom uk-alert-primary" uk-alert>
+<h3 class="uk-h3 uk-margin-remove">Get Your New {{ lead-type }}</h3>
+<p class="uk-margin-top">You will receive an email with a secure link to your {{ lead-type | downcase }} and subscribe to my private email list.</p>
+  <form id="gform" method="POST" class="uk-form-stacked" action="{{ site.lead-post-script }}">
+      <div class="uk-margin-medium-top">
+          <label for="name" class="uk-form-label">First Name:</label>
+          <div class="uk-form-controls">
+              <input name="name" id="name"  class="uk-input uk-form-large" type="text" placeholder="Name" required="">
+          </div>
+      </div>
+      <div class="uk-margin">
+          <label for="email" class="uk-form-label">Email:</label>
+          <div class="uk-form-controls">
+                <input name="email" id="email"  class="uk-input  uk-form-large" type="email" placeholder="Email" required="">
+             <span id="email-invalid" style="display:none">
+          Must be a valid email address</span>
+          </div>
+      </div>
+      <input type="hidden" name="subject" id="subject" value="{{ page.lead-id }}">
+      <input type="hidden" name="next" id="next" value="{{ site.url}}/thank-you">
+      <div class="uk-margin-medium-top">
+         <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}" data-badge="inline"></div>
+      </div>
+      <button class="uk-button uk-button-primary">Send it to me</button>
+  </form>
+<p class="small uk-margin-medium-top">{{ site.privacy-policy-lead }}</p>
+<div class="uk-margin uk-width-1-1" style="display:none;" id="thankyou_message">
+  <hr class="uk-divider-small">
+  <div >
+    <p class="uk-3">Thank you for your download.</p>
+  </div>
+</div>
+</section>
+<hr />

@@ -1,0 +1,20 @@
+<div class="uk-container uk-container-large uk-margin-large-top uk-margin-large-bottom services">
+  <h2 class="visuallyhidden">Services</h2>
+  <div class="uk-child-width-1-2@s uk-grid-large" uk-grid uk-height-match@m="row: false">
+    {% for service in site.services %}
+    {% unless service.title == "" %}
+      <div class="uk-transition-toggle uk-width-1-1@m uk-width-1-2@l">
+        <a href="{{ service.url }}">
+          <div class="paper uk-transition-scale-up">
+
+              <img class="service-icon" src="{{ service.image }}" />
+              <h3 class="uk-h3">{{ service.title }}</h3>
+              <p>{{ service.summary }}</p>
+
+          </div>
+            </a>
+      </div>
+      {% endunless %}
+      {% endfor %}
+  </div>
+</div>

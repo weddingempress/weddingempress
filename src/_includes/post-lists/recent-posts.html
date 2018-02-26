@@ -1,0 +1,33 @@
+<section>
+<h2 class="uk-margin-remove uk-text-center">Recent Posts</h2>
+<hr class="uk-divider-small uk-text-center">
+<ul class="uk-list recent-posts">
+  {% for post in site.posts limit:3 %}
+  <li class="uk-margin-bottom">
+    <a class="post-link" href="{{ post.url | relative_url }}">
+    <div class="uk-margin-remove-top" uk-grid>
+        <div class="uk-width-2-3">
+          <h3 class="uk-h2 uk-margin-remove">{{ post.title | markdownify | replace: '<p>', '' | replace: '</p>', '' }}</h3>
+          <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
+          </p>
+        </div>
+        <div class="uk-width-1-3">
+          <img src="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_800/{{ post.image }}" srcset="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_320/{{ post.image }} 320w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_640/{{ post.image }} 640w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_960/{{ post.image }} 960w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/fetch/c_limit,f_auto,q_auto:best,w_1100/{{ post.image }} 1100w"
+            sizes="(min-width: 50rem) 50rem, 90vw" class="uk-border-rounded featured-image" alt="{{ post.image-alt }}" width="1100" height="732">
+        </div>
+    </div>
+    <div  class="uk-margin-remove-top" uk-grid>
+      <div class="uk-width-1-1">
+        <p class="excerpt uk-margin-remove-top uk-text-left">{{ post.content | strip_html | truncatewords: 20 }}&ensp;<button class="button-in-text uk-button uk-button-default uk-button-small" uk-icon="icon: arrow-right">More&ensp;</button></p>
+      </div>
+    </div>
+    </a>
+    {% if forloop.last == true %} {% else %}
+    <hr /> {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<hr class="uk-divider-small uk-text-center">
+  <a href="/blog/" class="uk-width-1-2 uk-align-center uk-button uk-button-default" uk-icon="icon: arrow-right">View the Blog&ensp;</a>
+
+</section>

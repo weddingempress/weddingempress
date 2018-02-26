@@ -1,0 +1,19 @@
+{% if page.homepage %}
+{% include post-lists/recent-posts.html %}
+{% else %}
+{% include aside/content/bio.html %}
+{% endif %}
+{% if page.blog or page.auto-page or page.is-post %}
+{% include aside/content/list-of-cat-and-tags.html %}
+{% endif %}
+{% if page.homepage %}
+{% else %}
+<hr class="uk-divider-small uk-text-center" />
+{% include aside/content/affiliates.html %}
+{% endif %}
+<div class="uk-text-center">
+  <hr class="uk-divider-small" />
+  <ul class="bottom-wrap uk-subnav uk-subnav-divider" uk-margin>
+    <li><a href="#bottom" uk-scroll class="button-in-text uk-button uk-button-default uk-button-small" uk-icon="icon: arrow-down"></a></li>
+</ul>
+</div>

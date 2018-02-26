@@ -1,0 +1,14 @@
+@media screen and (max-width: 640px) {
+  .uk-slider-container {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.uk-slidenav {
+  color: $black !important;
+}
+
+.uk-slidenav:hover {
+  color: $grey !important;
+}

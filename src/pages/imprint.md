@@ -1,0 +1,92 @@
+---
+title: Imprint
+permalink: /imprint/
+display-title: false
+right-aside-bottom: false
+---
+
+<h1 class="visuallyhidden">{{ page.title }}</h1>
+<h2 class="uk-h3 uk-margin-remove">Terms of Service</h2>
+<ul class="uk-margin-medium-bottom" uk-accordion>
+<li>
+<h3 class="uk-accordion-title">1. Terms</h3>
+<div class="uk-accordion-content">
+By accessing the website at&nbsp;<a href="{{ site.url }}">{{ site.company.name }}</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">2. Use License</h3>
+<div class="uk-accordion-content">
+<ol type="a">
+<li>
+Permission is granted to temporarily download one copy of the materials (information or software) on {{ site.company.name }}'s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+
+<ol type="i">
+  <li>modify or copy the materials;</li>
+  <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+  <li>attempt to decompile or reverse engineer any software contained on {{ site.company.name }}'s website;</li>
+  <li>remove any copyright or other proprietary notations from the materials; or</li>
+  <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+</ol>
+</li>
+<li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by {{ site.company.name }}  at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</li>
+</ol>
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">3. Disclaimer</h3>
+<div class="uk-accordion-content">
+<ol type="a">
+<li>The materials on {{ site.company.name }}'s website are provided on an 'as is' basis. {{ site.company.name }}  makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</li>
+<li>Further, {{ site.company.name }}  does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</li>
+</ol>
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">4. Limitations</h3>
+<div class="uk-accordion-content">
+In no event shall {{ site.company.name }}  or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on {{ site.company.name }}'s website, even if {{ site.company.name }}  or a {{ site.company.name }}  authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">5. Accuracy of materials</h3>
+<div class="uk-accordion-content">
+The materials appearing on {{ site.company.name }}'s website could include technical, typographical, or photographic errors. {{ site.company.name }}  does not warrant that any of the materials on its website are accurate, complete or current. {{ site.company.name }}  may make changes to the materials contained on its website at any time without notice. However {{ site.company.name }}  does not make any commitment to update the materials.
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">6. Links</h3>
+<div class="uk-accordion-content">
+{{ site.company.name }}  has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by {{ site.company.name }}  of the site. Use of any such linked website is at the user's own risk.
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">7. Modifications</h3>
+<div class="uk-accordion-content">
+{{ site.company.name }}  may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">8. Governing Law</h3>
+<div class="uk-accordion-content">
+These terms and conditions are governed by and construed in accordance with the laws of {{ site.company.location }} and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
+</div>
+</li>
+<li>
+<h3 class="uk-accordion-title">Privacy Policy</h3>
+<div class="uk-accordion-content">
+Your privacy is important to us.
+It is {{ site.company.name }}'s policy to respect your privacy regarding any information we may collect while operating our website. Accordingly, we have developed this privacy policy in order for you to understand how we collect, use, communicate, disclose and otherwise make use of personal information. We have outlined our privacy policy below.
+<ul>
+<li>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</li>
+<li>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</li>
+<li>We will collect and use personal information solely for fulfilling those purposes specified by us and for other ancillary purposes, unless we obtain the consent of the individual concerned or as required by law.</li>
+<li>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.</li>
+<li>We will protect personal information by using reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</li>
+<li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li><li>We will only retain personal information for as long as necessary for the fulfilment of those purposes.</li></ul>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. {{ site.company.name }}  may change this privacy policy from time to time at {{ site.company.name }}'s sole discretion.
+</div>
+</li>
+</ul>
+<hr>
+The {{ site.company.name }} website is set in <a href="https://fonts.google.com/specimen/Merriweather">Merriweather</a> and <a href="https://fonts.google.com/specimen/Assistant">Assistant</a>. Built with :heart: with <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://getuikit.com/">UIKit</a>, and <a href="https://www.netlify.com/">Netlify.</a><br>
+Copyright © {{ 'now' | date: "%Y" }} by {{ site.company.name }}. <br>All rights reserved.

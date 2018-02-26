@@ -1,0 +1,89 @@
+::-moz-selection {
+  background: $highlight;
+  color: $black;
+}
+
+::selection {
+  background: $highlight;
+  color: $black;
+}
+
+* {
+  z-index: 0;
+}
+//
+// main, aside {
+//   z-index: 1;
+// }
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  overflow-x: hidden;
+  background: $background-color;
+  position: relative;
+  // background-image: $background-image;
+}
+
+.wrap, .site {
+  position: relative;
+  // overflow-x: hidden;
+}
+
+
+.paper,
+.uk-notification-message,
+.uk-offcanvas-bar {
+  // background: #fffff8;
+  // padding: 2em;
+  // box-shadow: -1px -1px 34px -13px $black;
+}
+
+.uk-offcanvas-bar {
+  background: #fffff8;
+  padding: 2em;
+  box-shadow: -1px -1px 34px -13px $black;
+}
+
+// .uk-notification-message,
+// .uk-offcanvas-bar {
+//   padding: 2em;
+// }
+@media screen and (min-width: 640px) {
+  .services .paper {
+    display: table;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .paper {
+    padding: 1em;
+  }
+}
+
+// @media screen and (min-width: 1600px) {
+//   .main-paper {
+//     margin-right: 40px;
+//   }
+// }
+//
+// .main-paper {
+//   padding: 3.5em !important;
+// }
+
+.uk-divider-small {
+  margin: 1.25em 0;
+  color: $grey;
+}
+// .paper-extend {
+//   box-shadow: -1px -1px 34px -13px $black;
+//   //box-shadow: 0px 8px 10px $black,
+//        //-10px 8px 15px gray, 10px 8px 15px $black;
+// }
+//
+// .post-header, .post-content {
+//   padding: 0 2em;
+// }

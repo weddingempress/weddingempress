@@ -1,0 +1,16 @@
+<div class="uk-child-width-1-1 uk-grid-match" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+  {% for service in site.services %}
+  <div class="uk-margin-remove">
+    <a href="{{ service.url }}">
+    <div class="uk-card uk-flex">
+      <div class="uk-card-media-left uk-flex uk-flex-middle uk-cover-container">
+        <img class="service-icon" src="{{ service.image }}" alt="{{ service.image-alt-text }}" />
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title uk-margin-remove">{{ service.title }}</h3>
+      </div>
+    </div>
+</a>
+  </div>
+  {% endfor %}
+</div>

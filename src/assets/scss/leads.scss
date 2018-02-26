@@ -1,0 +1,47 @@
+.paper-mail {
+  padding: 1em;
+  position: relative;
+  padding: 1em 1em 0;
+  border-radius: 3px;
+  box-shadow: -1px -1px 34px -13px $black;
+  // background: #d8eafc;
+  border: 9px solid transparent;
+  border-image: 9 repeating-linear-gradient(-45deg, red 0, red 10.5px, transparent 0, transparent 20.5px,
+                #58a 0, #58a 30.5px, transparent 0, transparent 40.5px);
+  // border-image: 6 linear-gradient(45deg, $primary, $light-blue);
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%231e87f0' fill-opacity='0.87' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+// .subscribe-button {
+//   background: linear-gradient(45deg, $primary, $light-blue);
+// }
+// .subscribe-button, .subscribe-button:hover {
+//   color: white;
+//   background-color: $white;
+// }
+//
+// .subscribe-button:hover {
+//   background: linear-gradient(45deg, $light-blue, $primary);
+// }
+
+// #F8E185
+#leadBox {
+  padding: 2em;
+  border-radius: 3px;
+  // border-top: 6px solid transparent;
+  // border-bottom: 6px solid transparent;
+  // border-image: 6 linear-gradient(45deg, $primary, $light-blue);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-image: 9 repeating-linear-gradient(-45deg, red 0, red 10.5px, transparent 0, transparent 20.5px,
+                #58a 0, #58a 30.5px, transparent 0, transparent 40.5px);
+}
+
+#leadBox *:not(.uk-button){
+  color: $primary;
+}
+#leadBox input, #leadBox input:hover {
+background: $white;
+}
+#leadBox input {
+  color: $black !important;
+}

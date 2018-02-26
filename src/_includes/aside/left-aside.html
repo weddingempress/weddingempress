@@ -1,0 +1,10 @@
+<div class="sidebar paper paper-mail" style="z-index:80;" uk-sticky="offset: 150; media:960; show-on-up: true; animation: uk-animation-slide-top">
+  {% include lead/subscribe.html %}
+  <hr>
+  {% if page.is-post or page.blog %}
+  {% include social/social-share.html %}
+  {% else %}
+  {% include social/social-follow.html %}
+  {% endif %}
+  {% include lead/subscribe-form-popup.html %}
+</div>

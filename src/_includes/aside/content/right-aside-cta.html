@@ -1,0 +1,13 @@
+<div class="right-aside-wrap">
+{% if page.right-aside-cta %}
+{{ page.right-aside-cta }}
+{% else %}
+<p class="uk-margin-bottom">
+{{ site.default-right-aside-cta }}
+</p>
+{% endif %}
+<hr class="uk-divider-small uk-text-center" />
+{% include aside/content/list-of-cat-and-tags.html %}
+{% if page.is-post %}
+{% include post-lists/related-posts.html %} {% endif %}
+</div>

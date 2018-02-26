@@ -1,0 +1,27 @@
+{% if page.blog or page.auto-page %} {% include post-lists/list-of-all-posts.html %} {% elsif page.is-post %}
+{{ content }}
+{% elsif page.image %}
+<img class="
+{% if page.url contains "service" %}
+service-icon
+{% else %}
+featured-image
+{% endif %}
+uk-margin-medium-bottom" src="{{ page.image }}" alt="{{ page.image-alt }}" /> {% if page.display-title == true %}
+<p class="uk-h1">
+  {{ page.title }}
+</p>
+{% endif %}
+{{ content }}
+{% else %}
+{% if page.display-title == true %}
+<p class="uk-h1">
+  {{ page.title }}
+</p>
+{% endif %}
+{{ content }}
+{% endif %}
+
+{% if page.is-post %}
+  <hr class="uk-margin-large-top uk-divider-small uk-text-center" />
+  {% endif %}

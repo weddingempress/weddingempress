@@ -1,0 +1,45 @@
+<li class="uk-margin-medium-bottom">
+  <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="uk-margin-medium-top js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
+      <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            {% if include.avatar %}
+              <img class="comment__avatar uk-border-circle" src="{{ include.avatar }}" alt="{{ include.name }}" height="80" width="80">
+            {% else %}
+              <img class="comment__avatar uk-border-circle" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=80&r=pg" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=100&r=pg 2x" alt="{{ include.name }}" height="80" width="80">
+            {% endif %}
+          </div>
+          <div class="uk-width-expand">
+              <h5 class="uk-comment-title uk-margin-remove" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.name | capitalize }}</span></h5>
+              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                  <li>  {% if include.date %}
+                      {% if include.index %}<a href="#comment{{ include.index }}" itemprop="url">{% endif %}
+                      <time datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.date | date: "%B %d, %Y at %-I:%M %P" }}</time>
+                      {% if include.index %}</a>{% endif %}
+                    {% endif %}</li>
+                      {% unless include.replying_to != 0 or page.comments_locked == true %}
+                      <li  class="comment__reply">
+                      <a rel="nofollow" class="uk-button uk-button-default" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')">Reply&ensp;<i class="fas fa-paper-plane"></i></a>
+                    </li>
+                      {% endunless %}
+              </ul>
+          </div>
+      </header>
+      <div class="uk-comment-body">
+          <p>{{ include.message | markdownify | replace: '<p>', '' | replace: '</p>', '' }}</p>
+      </div>
+  </article>
+  {% assign include.name = "" %}
+  {% capture i %}{{ include.index }}{% endcapture %}
+{% assign replies = site.comments | where_exp: 'item', 'item.replying_to == i' %}
+{% for reply in replies %}
+  {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
+  {% assign r           = reply.replying_to %}
+  {% assign replying_to = r | to_integer %}
+  {% assign avatar      = reply.avatar %}
+  {% assign email       = reply.email %}
+  {% assign name        = reply.name %}
+  {% assign date        = reply.date %}
+  {% assign message     = reply.content %}
+  {% include comments/comment.html index=index replying_to=replying_to avatar=avatar email=email name=name date=date message=message %}
+{% endfor %}
+</li>

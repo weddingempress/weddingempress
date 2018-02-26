@@ -1,0 +1,149 @@
+title:
+description:
+
+url: http://localhost:3000
+repository:
+branch: master
+author:
+  email:
+  name:
+  picture:
+  url:
+  bio:
+
+company:
+  name:
+  location:
+  logo:
+  phone:
+
+touch-icon:
+fav-icon:
+
+cloudinary-name:
+
+analytics:
+  google:
+  hotjar:
+  momently:
+
+mailchimp:
+  post:
+  hidden:
+
+lead-post-script:
+
+reCaptcha:
+  siteKey:
+  secret:
+
+privacy-policy-comment: 'Privacy: Policy: Your email address will not be published or shared.'
+
+privacy-policy-lead: 'Privacy Policy: We hate spam and promise to keep your email address safe.'
+
+comment-policy: 'Comment Policy: We do our best to respond particularly on new articles, but don’t have the ability to respond to every comment. Insults and disrespectful comments are not accepted. Please do not include links not pertinent to the discussion. Thank you.'
+
+default-right-aside-cta: 'Thank you for reading. If you have found this article helpful please comment, share, subscribe. It means so much! :heart:'
+
+
+
+
+
+# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+source: .tmp/src
+destination: .tmp/dist
+include: [_redirects, google.html,BingSiteAuth.xml]
+exclude: ['assets']
+
+algolia:
+  application_id:
+  index_name:
+  search_only_api_key:
+
+
+# Enables future posts (posts with dates in the future) and drafts
+future: true
+show_drafts: false
+# Disables the more accurate related posts for faster generating of the site
+lsi: false
+# Only make the last 10 posts so generating isn't slow
+# limit_posts: 10
+
+# Permalink structure and pagination options
+permalink: blog/:year/:month/:title/
+
+# Markdown library and options
+markdown: kramdown
+highlighter: rouge
+
+# Extending Jekyll
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-paginate-v2
+  - jemoji
+  - jekyll-typogrify
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page
+
+collections_dir: my_collections
+
+collections:
+  social:
+    output: false
+  testimonials:
+    output: false
+  comments:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: pages   # limit to posts
+    values:
+      layout: default
+      display-title: true
+      comments: false
+      comments-locked: true
+      right-aside-bottom: false
+  -
+    scope:
+      path: "_posts"      # empty string for all files
+    values:
+      layout: post
+      is-post: true
+      comments: false
+      comments-locked: true
+
+############################################################
+# Site configuration for the Auto-Pages feature
+# The values here represent the defaults if nothing is set
+autopages:
+
+  # Site-wide kill switch, disable here and it doesn't run at all
+  enabled: true
+  collections:
+    enabled: false
+  tags:
+    layouts:
+      - 'autopage.html'
+    title: 'Posts Tagged With :tag'
+    permalink: '/blog/tag/:tag'
+  categories:
+    layouts:
+      - 'autopage.html'
+    title: 'Posts Filed Under :cat'
+    permalink: '/blog/category/:cat'

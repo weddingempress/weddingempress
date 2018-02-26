@@ -1,0 +1,50 @@
+<div id="respond">
+<form id="comment-form" class="page__form js-form form" method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.branch }}/comments">
+ <h4 class="page__section-label uk-h3">Share Your Message <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">Cancel reply</a></small></h4>
+ <fieldset class="hidden" style="display: none;">
+   <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+   <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+   <input type="hidden" id="comment-parent" name="fields[replying_to]" value="">
+   <input type="hidden" id="comment-post-id" name="fields[slug]" value="{{ page.slug }}">
+   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+   <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
+   </fieldset>
+ <div class="uk-margin">
+     <label for="message" class="uk-form-label">Message: <small class="grey">(<a href="https://kramdown.gettalong.org/quickref.html" target="_blank">Markdown</a> and <a href="https://gist.github.com/rxaviers/7360908" target="_blank">:Emojis:</a> are allowed)</small></label>
+     <div class="uk-form-controls">
+         <textarea class="uk-textarea uk-form-large" name="fields[message]" placeholder="Your Message" required rows="5" spellcheck="true"></textarea>
+         <p class="small uk-margin-top">
+          {{ site.comment-policy }}
+         </p>
+     </div>
+ </div>
+ <div class="uk-margin-medium-top">
+     <label for="name" class="uk-form-label">Name:</label>
+     <div class="uk-form-controls">
+         <input name="fields[name]" class="uk-input uk-form-large" type="text" placeholder="Your Name" required="">
+     </div>
+ </div>
+ <div class="uk-margin">
+     <label for="email" class="uk-form-label">Email: <small class="grey">(used for <a href="http://gravatar.com" target="_blank">Gravatar</a> image and reply notifications)</small></label>
+     <div class="uk-form-controls">
+           <input name="fields[email]"  class="uk-input uk-form-large" type="email" placeholder="Your Email Address" required="">
+           <p class="small uk-margin-top">
+            {{ site.privacy-policy-comment }}
+           </p>
+     </div>
+ </div>
+ <div class="uk-margin-medium-top">
+    <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}" data-badge="inline"></div>
+   <label for="comment-form-reply">
+     <input class="uk-checkbox uk-margin-bottom" type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
+     Notify me of replies by email.
+   </label>
+ </div>
+   <button type="submit" id="comment-form-submit" class="uk-button uk-button-primary uk-margin-medium-bottom">Submit</button>
+</form>
+<div class="js-notice hidden" uk-alert>
+ <a class="uk-alert-close" uk-close></a>
+ <p></p>
+</div>
+</div>
+<script async src="https://www.google.com/recaptcha/api.js"></script>

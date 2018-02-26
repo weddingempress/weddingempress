@@ -1,0 +1,32 @@
+<section class="uk-margin-medium-top">
+  <ul class="uk-tab" uk-switcher="animation: uk-animation-fade">
+    <li
+    {% if page.url contains "category" %}
+    class="active" aria-expanded="true"
+    {% endif %}
+    ><a href="#"><i class="far fa-folder-open"></i>&ensp;Categories</a></li>
+    <li
+    {% if page.url contains "blog/tag/" %}
+    class="active" aria-expanded="true"
+    {% endif %}><a href="#"><i class="fas fa-tag"></i>&ensp;Tags</a></li>
+  </ul>
+  <ul class="uk-switcher" uk-margin>
+    <li>
+      <ul class="uk-subnav categories uk-margin-remove" uk-margin>
+        {% capture c %}{% for c in site.categories %}{{c[0]}}{{','}}{% endfor %}{% endcapture %} {% assign categories = c | downcase | split:"," | sort %} {% assign d = categories | uniq %} {% for category in d %}
+        <li><a href="/blog/category/{{ category | slugify }}/"> {{ category | capitalize_all | replace:'-', ' ' | replace:'<p>', '' | replace:'</p>', '' | replace:"Julie's", "Julie&rsquo;s" | replace:'And', 'and' | replace:'Or', 'or' }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li class="clearfix">
+      <ul class="tags uk-margin-remove">
+        {% capture c %}{% for c in site.tags %}{{c[0]}}{{','}}{% endfor %}{% endcapture %} {% assign tags = c | downcase | split:"," | sort %} {% assign d = tags | uniq %}
+        {% for tag in d %}
+        {% unless tag == "" %}
+        <li><a href="/blog/tag/{{ tag | slugify }}/"> {{ tag | capitalize_all | replace:'-', ' ' | replace:'<p>', '' | replace:'</p>', '' | replace:'And', 'and' | replace:'Or', 'or' }}</a>{% unless forloop.last %}, {% endunless %}</li>
+        {% endunless %}
+        {% endfor %}
+        </ul>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,40 @@
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+// .uk-container {
+//   padding-right: 0;
+// }
+
+.uk-container-expand {
+  background: transparent;
+}
+
+
+@media screen and (max-width: 640px) {
+  .site, .services {
+    padding: 0;
+  }
+  // .uk-width-1-1\@l, [class*=uk-width] {
+  //     width: 110% !important;
+  // }
+  .main-paper {
+    padding: 20px !important;
+  }
+  .paper-mail {
+    margin: 0 15px;
+  }
+
+  .footer {
+    margin: 0 25px;
+  }
+}
+// div {
+//   border-radius: 3px;
+// }

@@ -1,0 +1,6 @@
+https://com/* https://.com/:splat 301!
+http://com/* https://.com/:splat 301!
+http://www.com/* https://.com/:splat 301!
+http://com/* https://.com/:splat 301!
+
+/* /404/index.html  404

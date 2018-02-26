@@ -1,0 +1,18 @@
+.uk-pagination {
+  font-family: $sans-serif;
+  margin-right: 11px;
+}
+
+.uk-pagination > * > * {
+  color: $black;
+  font-size: 1em;
+}
+
+.pagination li {
+  float: left;
+}
+
+.selected a {
+  color: $red;
+  border-bottom: 2px solid $red;
+}

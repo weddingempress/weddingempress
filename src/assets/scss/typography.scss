@@ -1,0 +1,148 @@
+html {
+  font-size: 1em;
+  background-color: $white;
+}
+
+body {
+  font-weight: 500;
+  font-family: $serif;
+  color: $black;
+  font-size: 20px;
+  line-height: 1.75;
+}
+@media all and (max-width: 640px) and (min-width: 320px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+h1,
+h2,
+h3,
+h4 {
+  // margin: 1.414em 0 0;
+  line-height: 1.2;
+}
+
+.paper > h1, .paper > .uk-h1,
+.paper > h2, .paper > .uk-h2,
+.paper > h3, .paper > .uk-h3,
+.paper > h4, .paper > .uk-h4
+.paper a > h1, .paper a > .uk-h1,
+.paper a > h2, .paper a > .uk-h2,
+.paper a > h3, .paper a > .uk-h3,
+.paper a > h4, .paper a > .uk-h4 {
+  margin-top: 0;
+  text-align: center;
+}
+
+main section h1:first-of-type,
+main section h2:first-of-type,
+main section h3:first-of-type,
+main section h4:first-of-type,
+ {
+  margin-top: 0;
+  text-align: center;
+}
+
+
+.uk-comment-body > h1, .uk-comment-body > .uk-h1,
+.uk-comment-body > h2, .uk-comment-body > .uk-h2,
+.uk-comment-body > h3, .uk-comment-body > .uk-h3,
+.uk-comment-body > h4, .uk-comment-body > .uk-h4 {
+  margin-top: 0;
+}
+
+
+.uk-h1,
+h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.999em;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+}
+
+.uk-h2,
+h2 {
+  font-size: 1.414em;
+  font-weight: 700;
+}
+// .content h2, .content .uk-h2 {
+//   margin: 1.414em 0 1.5em;
+// }
+
+p {
+  margin: 0 0 1.414em;
+}
+
+.small,
+small {
+  font-size: 0.85em;
+  line-height: 1.4em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+em {
+  color: $black;
+}
+
+u {
+  text-decoration: none;
+  color: $black;
+  background: -webkit-linear-gradient($white, $white), -webkit-linear-gradient($white, $white), -webkit-linear-gradient($black, $black);
+  background: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($black, $black);
+  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 $white, -0.03em 0 $white, 0 0.03em $white, 0 -0.03em $white, 0.06em 0 $white, -0.06em 0 $white, 0.09em 0 $white, -0.09em 0 $white, 0.12em 0 $white, -0.12em 0 $white, 0.15em 0 $white, -0.15em 0 $white;
+  background-position: 0 93%, 100% 93%, 0 93%;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  u {
+    background-position-y: 87%, 87%, 90%;
+  }
+}
+
+u:selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe;
+}
+
+u::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe;
+}
+
+.sans-serif {
+  font-family: $sans-serif;
+}
+
+.grey {
+  color: $grey;
+}

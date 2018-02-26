@@ -1,0 +1,8 @@
+<section>
+  <h3 class="uk-text-center uk-margin-small uk-h4"><i class="far fa-folder-open"></i>&ensp;Categories</h3>
+  <ul class="uk-subnav categories uk-margin-remove" uk-margin>
+    {% capture c %}{% for c in site.categories %}{{c[0]}}{{','}}{% endfor %}{% endcapture %} {% assign categories = c | downcase | split:"," | sort %} {% assign d = categories | uniq %} {% for category in d %}
+    <li><a href="/blog/category/{{ category | slugify }}/"> {{ category | capitalize_all | replace:'-', ' ' | replace:'<p>', '' | replace:'</p>', '' | replace:"Julie's", "Julie&rsquo;s" | replace:'And', 'and' | replace:'Or', 'or' }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

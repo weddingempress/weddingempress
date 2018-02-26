@@ -1,0 +1,12 @@
+.uk-button {
+  font-size: .85em;
+  border-radius: 3px;
+  font-family: $sans-serif;
+}
+
+.related-posts .uk-button, main .uk-button {
+    background: none !important;
+    background-size: 0 !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+}

@@ -1,0 +1,119 @@
+.recent-posts {
+  font-size: 0.8em;
+}
+
+.recent-posts img {
+  height: 65px;
+  width: auto;
+}
+
+.categories, .bottom-wrap {
+  justify-content: center;
+}
+
+
+
+.affiliate-logo {
+  width: 100px;
+  float: left;
+  position: relative;
+  top: 0.3em;
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+
+.affiliate-text {
+  font-size: 0.85em;
+}
+
+.bio {
+  margin: 0.15em 0 0;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+.headshot {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin-right: .7em;
+  margin-bottom: 1em;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 2px solid #eee;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.uk-tab {
+  justify-content: center;
+}
+
+.tags {
+  list-style: none;
+  font-size: .8em;
+  font-style: italic;
+    justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+}
+.tags li {
+  display: inline;
+  float: left;
+  margin-right: 8px;
+}
+
+.tags li a {
+  color: $black;
+}
+
+.tags li a:hover {
+  color: #666;
+}
+.uk-subnav {
+  font-family: $sans-serif;
+  line-height: 1.2rem;
+}
+
+.uk-subnav > * {
+  padding-left: 10px;
+}
+
+// .uk-subnav > * > :first-child {
+//   font-family: $sans-serif;
+//   font-size: 0.9em;
+//   text-transform: none;
+// }
+
+.categories.uk-subnav > * > :first-child {
+  font-family: $serif;
+  font-style: italic;
+  font-size: 0.9em;
+  text-transform: none;
+}
+
+// .categories {
+//     justify-content: center;
+// }
+
+.categories > * > :first-child {
+  color: $black;
+      margin-right: .7em;
+}
+
+.subscribe-bar > .uk-navbar-item {
+  margin-right: 1.5em;
+}
+
+.subscribe-bar .email {
+  margin-right: 0;
+}
+
+.email-pitch {
+  font-size: 0.9em;
+  line-height: 1.4em;
+  margin-bottom: 0.75em;
+}

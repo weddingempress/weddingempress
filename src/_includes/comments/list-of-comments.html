@@ -1,0 +1,25 @@
+{% assign pageComments = site.comments | where:"slug", page.slug %}
+{% assign comments = pageComments | where_exp:"item", "item.replying_to == blank" %}
+{% if comments.size >= 1 %}
+<section>
+<h3 class="uk-h2">Comments</h3>
+<ul class="comments uk-list uk-list-divider uk-margin-medium-bottom">
+{% for comment in comments %}
+{% if comment.approved == true %}
+  {% assign index       = forloop.index %}
+  {% assign r           = comment.replying_to %}
+  {% assign replying_to = r | to_integer %}
+  {% assign avatar = comment.avatar %}
+  {% assign email = comment.email %}
+  {% assign name = comment.name %}
+  {% assign date = comment.date %}
+  {% assign message = comment.message %}
+  {% include comments/comment.html index=forloop.index avatar=avatar replying_to=replying_to  email=email name=name date=date message=message %}
+  {% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+{% if page.comments-locked == false %}
+  {% include comments/comment-form.html %}
+{% endif %}
+</section>

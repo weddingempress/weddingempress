@@ -1,0 +1,9 @@
+<p class="uk-text-center uk-margin-small small"><i class="fa fa-tags" aria-hidden="true"></i>&ensp;Tags:</p>
+<ul class="uk-subnav categories uk-margin-remove" uk-margin>
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+      <li><a href="/tag/{{ tag | first | slugify }}/">
+              {{ tag[0] | replace:'-', ' ' }}
+      </a></li>
+  {% endfor %}
+</ul>

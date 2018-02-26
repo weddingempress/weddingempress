@@ -1,0 +1,53 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="nofollow" />
+
+  <!-- SEO -->
+  {% seo %}
+  {% include fonts.html %}
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <!-- CSS -->
+  <!-- inject:css -->
+  <!-- endinject -->
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.touch-icon }}">
+  <link rel="shortcut icon" href="{{ site.fav-icon }}">
+
+  {% if page.homepage %}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% endif %}
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.url }}/blog/feed.xml" />
+
+  <!-- Hotjar Tracking Code -->
+  <!-- <script>
+    (function(h, o, t, j, a, r) {
+      h.hj = h.hj || function() {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: {{ site.analytics.hotjar }},
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <script src="//s3-us-west-2.amazonaws.com/momently-static/loader/{{ site.analytics.momently }}_momently.js" name="momently-script"></script> -->
+</head>

@@ -1,0 +1,42 @@
+<div class="nav-wrap uk-margin-large-bottom {% unless page.homepage %} granite-bg{% endunless %}" {% unless page.homepage %} uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up" {% endunless %}>
+  <div class="uk-container uk-container-expand nav">
+    <div class="uk-grid uk-grid-large">
+      <div class="uk-width-1-5@xl uk-width-1-3@l uk-width-1-3@m uk-visible@m uk-text-right">
+        <div class="uk-navbar-item logo-wrap">
+          <a href="/"><img class="nav-logo"  src="{{ site.company.logo }}" alt="{{ site.company.name }} logo"/>
+          </a>
+        </div>
+
+      </div>
+      <div class="uk-width-4-5@xl uk-width-2-3@l uk-width-2-3@m uk-width-1-1">
+        <nav class="uk-navbar-container uk-margin" uk-navbar>
+          <h1 class="visuallyhidden">Main Navigation</h1>
+          <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav uk-visible@m">
+              <li class="uk-navbar-item"><a href="/blog/">Blog</a></li>
+              <li class="uk-navbar-item"><a href="/services/">Services</a>
+                  <div class="uk-navbar-dropdown">
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                        {% for service in site.services %}
+                          <li><a href="{{ service.url }}">{{ service.title }}</a></li>
+                          {% endfor %}
+                      </ul>
+                  </div></li>
+              <li class="uk-navbar-item"><a href="/class-schedule/">Class Schedule</a></li>
+            </ul>
+            <a class="uk-hidden@m" href="{{ site.url }}">
+              <img class="nav-logo-mini"  src="{{ site.company.logo }}" alt="{{ site.company.name }} logo"/>
+            </a>
+          </div>
+          <div class="uk-navbar-right uk-navbar-right-short">
+          <div class="uk-navbar-item call  uk-visible@xl">
+                Get Started Today.
+                Call {{ site.company.phone }}
+              </div>
+              {% include header/mobile-nav.html %}
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

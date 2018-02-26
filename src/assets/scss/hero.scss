@@ -1,0 +1,99 @@
+.hero-heading {
+  font-size: 2.5em;
+  font-family: $sans-serif;
+  line-height: 1em;
+  text-indent: -0.5em;
+  color: $blue;
+  margin-top: 2em;
+}
+
+
+//
+// .uk-slider-container {
+//   box-shadow: -1px -1px 34px -13px $black;
+// }
+
+[class*=uk-transition-scale] {
+  opacity: 1;
+}
+
+.testimonial-wrap {
+  margin: 4em 0;
+}
+
+@media screen and (max-width: 640px) {
+.services .paper {
+  padding: 3em;
+}
+.hero-heading {
+  font-size: 1.5em;
+  padding-left: .5em;
+}
+.testimonial-wrap {
+  margin: 1em 0;
+}
+}
+@media screen and (min-width: 640px) {
+  .testimonial-wrap .uk-slider {
+    margin: 88px 0;
+  }
+  .testimonial-image {
+    float: left;
+    margin: 0 1em 6em 0;
+  }
+}
+
+.testimonial-image {
+  display: block;
+  margin: 0 auto;
+  padding-right: 1em;
+}
+
+
+
+
+
+
+.uk-tab li a {
+  font-family: $sans-serif;
+  font-size: 1rem;
+}
+
+.uk-tab > .uk-active > a,
+.uk-tab > li > a {
+  padding-right: 20px;
+}
+.testimonials {
+  font-size: 1rem;
+}
+
+.paper-switch {
+  height: 780px;
+}
+.service-icon {
+  width: 50px;
+  margin: 0 auto .5em;
+  display: block;
+}
+
+.uk-tab-left li a {
+  text-align: center;
+}
+
+.uk-card {
+  border-radius: 3px;
+}
+
+.hero {
+  padding: 0;
+  border-top: 5px solid $red;
+  border-bottom: 5px solid $red;
+}
+
+.transparent {
+  background: none;
+}
+
+.hero-wrap {
+  padding-bottom: 3em !important;
+}

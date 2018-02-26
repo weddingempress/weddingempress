@@ -1,0 +1,5 @@
+<section class="clearfix">
+  <h3 class="visuallyhidden">Meet {{ site.author.name }}</h3>
+<img class="uk-border-circle headshot" src="{{ site.author.picture }}" alt="{{ site.author.name }} headshot">
+<p class="bio">{{ site.author.bio | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+</section>

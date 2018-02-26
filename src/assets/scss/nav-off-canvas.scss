@@ -1,0 +1,35 @@
+.uk-offcanvas-bar .uk-navbar-item {
+  height: 40px;
+}
+
+.uk-offcanvas-bar .uk-navbar-item a {
+  font-family: $sans-serif;
+  color: $black;
+}
+
+.uk-offcanvas-bar .uk-close,
+.uk-offcanvas-bar .uk-close:hover {
+  color: $black;
+}
+
+.uk-offcanvas-content .uk-subnav {
+      margin: 12px 0;
+}
+
+// .uk-navbar span .uk-icon {
+//   top: 12px;
+// }
+.bar-menu {
+  top: 14px !important;
+  right: 5px !important;
+}
+.to-bottom {
+  position: relative;
+top: -1px;
+}
+
+.uk-offcanvas-bar .underline {
+  border-bottom: 2px solid $red;
+  padding-top: 3px !important;
+  color: $red !important;
+}
