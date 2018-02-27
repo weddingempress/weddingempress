@@ -131,6 +131,9 @@ defaults:
       is-post: true
       comments: false
       comments-locked: true
+      left-aside: false
+      right-aside-top: false
+      right-aside-bottom: false
   -
     scope:
       path: "wedding/placecards/_posts"
