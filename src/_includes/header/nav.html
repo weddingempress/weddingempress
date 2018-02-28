@@ -21,6 +21,26 @@
           </div>
           <div class="uk-navbar-right uk-navbar-right-short">
           <div class="uk-navbar-item call  uk-visible@xl">
+
+            <select id="currency" class="form-control">
+                    <option value="usd">USD</option>
+                    <option value="cad">CAD</option>
+                    <option value="eur">EUR</option>
+                  </select>
+            <ul class="uk-subnav snipcart-summary">
+              <li class="snipcart-checkout">
+                <a href="#">
+                  View cart
+                </a>
+              </li>
+              <li>
+                <span class="badge snipcart-total-items">0</span>
+              </li>
+
+              <li>
+              <span class="snipcart-total-price">$ 0.00</span>
+              </li>
+            </ul>
               </div>
               {% include header/mobile-nav.html %}
           </div>
