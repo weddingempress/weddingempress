@@ -2,6 +2,8 @@
 title: Imprint
 permalink: /imprint/
 display-title: false
+left-aside: false
+right-aside-top: false
 right-aside-bottom: false
 ---
 
@@ -88,5 +90,7 @@ It is {{ site.company.name }}'s policy to respect your privacy regarding any inf
 </li>
 </ul>
 <hr>
-The {{ site.company.name }} website is set in <a href="https://fonts.google.com/specimen/Merriweather">Merriweather</a> and <a href="https://fonts.google.com/specimen/Assistant">Assistant</a>. Built with :heart: with <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://getuikit.com/">UIKit</a>, and <a href="https://www.netlify.com/">Netlify.</a><br>
+<p class='content uk-text-center'>
+The {{ site.company.name }} website is set in <a href="https://fonts.google.com/specimen/Cormorant+Garamond">Cormorant Garamond</a> and <a href="https://fonts.google.com/specimen/Proza+Libre">Proza Libre</a>. <br>
 Copyright © {{ 'now' | date: "%Y" }} by {{ site.company.name }}. <br>All rights reserved.
+</p>

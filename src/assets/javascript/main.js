@@ -1,21 +1,18 @@
 'use strict';
 
-$(function() {
-  $('#currency').change(function() {
-    Snipcart.api.setCurrency($(this).val());
-  });
-});
-
 Snipcart.subscribe('cart.ready', function() {
-});
+        $('#currency').val(Snipcart.api.getCurrentCurrency());
+      });
 
-Snipcart.subscribe('cart.ready', function() {
-  $('#currency').val(Snipcart.api.getCurrentCurrency());
-});
+      Snipcart.subscribe('currency.changed', function (currency) {
+        $('#currency').val(currency);
+      });
 
-Snipcart.subscribe('currency.changed', function (currency) {
-  $('#currency').val(curency);
-});
+      $(function() {
+        $('#currency').change(function () {
+          Snipcart.api.setCurrency($(this).val());
+        });
+      });
 
 function setCookie(name,value,days) {
     var expires = "";

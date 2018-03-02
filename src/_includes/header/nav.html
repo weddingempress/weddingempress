@@ -3,48 +3,59 @@
     <div class="uk-grid uk-grid-large">
       <div class="uk-width-1-5@xl uk-width-1-3@l uk-width-1-3@m uk-visible@m uk-text-right">
         <div class="uk-navbar-item logo-wrap">
-
+            <ul class="uk-navbar-nav">
+                <!-- <li class="uk-navbar-item">
+          <a href="{{ site.url }}">Wedding Empress
+        </a></li> -->
+      </ul>
         </div>
 
       </div>
-      <div class="uk-width-4-5@xl uk-width-2-3@l uk-width-2-3@m uk-width-1-1">
-        <nav class="uk-navbar-container uk-margin" uk-navbar>
-          <h1 class="visuallyhidden">Main Navigation</h1>
-          <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav uk-visible@m">
-              <li class="uk-navbar-item"><a href="{{ site.url }}">{{ site.title }}
-              </a></li>
-            </ul>
-            <a class="uk-hidden@m" href="{{ site.url }}">
-              <img class="nav-logo-mini"  src="{{ site.company.logo }}" alt="{{ site.company.name }} logo"/>
-            </a>
-          </div>
-          <div class="uk-navbar-right uk-navbar-right-short">
-          <div class="uk-navbar-item call  uk-visible@xl">
+      <div class="uk-width-4-5@xl uk-width-4-5@l uk-width-4-5@m uk-width-1-1@s">
 
-            <select id="currency" class="form-control">
-                    <option value="usd">USD</option>
-                    <option value="cad">CAD</option>
-                    <option value="eur">EUR</option>
-                  </select>
-            <ul class="uk-subnav snipcart-summary">
-              <li class="snipcart-checkout">
-                <a href="#">
+        <div class="uk-width-5-6@xl uk-width-2-3@l uk-width-2-3@m uk-width-1-1">
+          <nav class="uk-navbar-container uk-margin" uk-navbar>
+            <h1 class="visuallyhidden">Main Navigation</h1>
+            <div class="uk-navbar-left">
+              <ul class="uk-navbar-nav uk-visible@m">
+                <li class="uk-navbar-item"><a href="{{ site.url }}">Wedding Empress
+              </a></li>
+              <li class="uk-navbar-item"><a uk-toggle="target: #modal-close-inside" href="#">How it Works            </a></li>
+
+        </a></li>
+              </ul>
+              <a class="uk-hidden@m" href="{{ site.url }}">
+            Wedding Empress
+            </a>
+            </div>
+            <div class="uk-navbar-right uk-navbar-right-short">
+              <div class="uk-navbar-item call  uk-visible@xl">
+                <ul class="uk-subnav snipcart-summary">
+                  <!-- <li>
+                    <select id="currency" class="uk-select">
+                        <option value="usd">USD</option>
+                        <option value="cad">CAD</option>
+                        <option value="eur">EUR</option>
+                      </select>
+                  </li> -->
+                  <li class="snipcart-checkout">
+                    <a href="#">
                   View cart
                 </a>
-              </li>
-              <li>
-                <span class="badge snipcart-total-items">0</span>
-              </li>
+                  </li>
+                  <li>
+                    <span class="badge snipcart-total-items">0</span>
+                  </li>
 
-              <li>
-              <span class="snipcart-total-price">$ 0.00</span>
-              </li>
-            </ul>
+                  <li>
+                    <span class="snipcart-total-price">$ 0.00</span>
+                  </li>
+                </ul>
               </div>
               {% include header/mobile-nav.html %}
-          </div>
-        </nav>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   </div>

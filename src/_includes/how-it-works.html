@@ -1,0 +1,38 @@
+<div id="modal-close-inside" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2>How it Works:</h2>
+        <ol class="uk-list-divider">
+          <li>
+            First, purchase your favorite placecard design.&ensp;
+          </li>
+          <li>
+            Next, you will receive your editable PDF file via email. Download it to your computer. <button class="uk-button buy uk-button-small uk-button-default">
+              View/Print a sample 
+            </button>
+          </li>
+          <li>
+            Then, type in the names and table assignments. <br />Or purchase our &ensp;{% assign automate = site.categories.placecards | where: "title", "Automate Add On" %}
+            <button class="snipcart-add-item uk-button buy uk-button-small uk-button-default"
+                data-item-id="{{ automate.product-id }}"
+                data-item-name="{{ automate.title }}"
+                data-item-price='{{ automate.product-price}}'
+                data-item-url="{{ site.url }}{{ automate.url }}"
+                data-item-file-guid="{{ automate.product-download-id }}"
+                data-item-description="{{ automate.description}}">
+                    Automate Add On
+            </button>&ensp;
+             and The Empress will add your guests for you and send you the generated PDF files for you to print.
+          </li>
+          <li>
+            Save and print the file(s).
+          </li>
+          <li>
+            Use a ruler and exacto knife (or your favorite tool) to cut out the placecards.
+          </li>
+          <li>
+            Repeat and enjoy!
+          </li>
+        </ol>
+    </div>
+</div>

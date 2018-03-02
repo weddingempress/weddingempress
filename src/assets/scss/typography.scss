@@ -1,19 +1,42 @@
-html {
-  font-size: 1em;
-  background-color: $white;
-}
-
 body {
-  font-weight: 500;
-  font-family: $serif;
+  font-weight: 400;
+  font-family: $sans-serif;
   color: $black;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.75;
+  background-color: $white;
 }
 @media all and (max-width: 640px) and (min-width: 320px) {
   body {
     font-size: 17px;
   }
+}
+
+.nav-font {
+  font-family: $nav-font;
+}
+
+.automate {
+  font-family: $sans-serif !important;
+  color: $black !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+.gold {
+  color: $gold !important;
+}
+
+.lowercase {
+  text-transform: lowercase;
+  margin: 0 5px;
+}
+.price {
+  position: relative;
+  top: 3px;
+}
+sup {
+  font-size: .7em;
 }
 
 .uk-h1,
@@ -28,9 +51,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $sans-serif;
+  font-family: $heading;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.2em;
+  font-weight: 700;
 }
 
 .uk-h1,

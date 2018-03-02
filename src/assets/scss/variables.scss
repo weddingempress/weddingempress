@@ -6,6 +6,7 @@ $grey: #999;
 $red: #b90005;
 $blue: #1956a5;
 $light-blue: #81D4FA;
+$gold: #CAA94B;
 
 // $background-color: #faf0e6;
 // $background-color: #FFFAE6;
@@ -15,5 +16,15 @@ $background-color: $white;
 
 $background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 
-$serif: 'Merriweather', serif;
-$sans-serif: 'Assistant', sans-serif;
+// $serif: 'Merriweather', serif;
+// $sans-serif: 'Assistant', sans-serif;
+
+$sans-serif: 'Proza Libre', sans-serif;
+$nav-font: 'Proza Libre', sans-serif;
+// $heading:'Proza Libre', sans-serif;
+$serif: 'Cormorant', serif;
+$heading: 'Cormorant Garamond', serif;
+$nav-font: 'Karla', sans-serif;
+// $sans-serif: 'Karla', sans-serif;
+// $heading:'Karla', sans-serif;
+// $serif: 'Karla', sans-serif;

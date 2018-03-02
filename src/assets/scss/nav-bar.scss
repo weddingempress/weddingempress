@@ -1,5 +1,19 @@
+.uk-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uk-navbar-right .uk-subnav {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// .nav {
+//   height: 75px;
+// }
 .uk-navbar-nav > li > a {
-  font-family: $sans-serif;
+  font-family: $nav-font;
   text-transform: none;
   color: $black;
 }
@@ -54,7 +68,7 @@
 }
 
 .nav-wrap.uk-sticky-fixed {
-  border-bottom: 2px solid $red;
+  border-bottom: 1px solid $black;
 }
 
 // .nav, .uk-offcanvas-bar {
