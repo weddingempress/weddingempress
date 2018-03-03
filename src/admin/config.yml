@@ -8,6 +8,22 @@ media_folder: "src/assets/images" # Folder where user uploaded files should go
 public_folder: "assets/images"
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "placecards" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Wedding Placecards" # Used in the UI, ie.: "New Post"
+    folder: "src/my_collections/wedding/placecards/_posts" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Publish Date/Time", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "Images", name: images, widget: list, required: false}
+      - {label: "Image Alt Text", name: images, widget: list, required: false}      
+      - {label: "Categories", name: categories, widget: list, required: false}
+      - {label: "Tags", name: tags, widget: list, required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Blog Posts" # Used in the UI, ie.: "New Post"
     folder: "src/my_collections/blog/_posts" # The path to the folder where the documents are stored
