@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article class="post content" itemid="{{ site.url }}/{{ page.url }}" itemscope itemtype="http://schema.org/BlogPosting">
   <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
   <meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
@@ -10,8 +11,17 @@ layout: default
     <hr class="uk-divider-small" />
   </header>
   <div class="post-content" itemprop="articleBody">
+    <p class="uk-text-center price"><sup>$</sup>{{ page.product-price | remove: ".0" }}<sup>.00</sup>
+    </p>
     {{ content }}
-    <div class="uk-text-center">
+    {% unless page.title == "Automate Add On" %}
+    <p>
+      {% include general-placecard-product-info.html %}
+    </p>
+    {% endunless %}
+
+    <div class="uk-text-center uk-margin-top">
+
       <button class="snipcart-add-item uk-button uk-button-secondary"
           data-item-id="{{ page.product-id }}"
           data-item-name="{{ page.title }}"

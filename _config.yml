@@ -142,6 +142,7 @@ defaults:
       is-post: true
       comments: false
       comments-locked: true
+
   -
     scope:
       path: "blog/_posts"      # empty string for all files

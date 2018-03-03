@@ -7,21 +7,15 @@
             First, purchase your favorite placecard design.&ensp;
           </li>
           <li>
-            Next, you will receive your editable PDF file via email. Download it to your computer. <button class="uk-button buy uk-button-small uk-button-default">
-              View/Print a sample 
-            </button>
+            Next, you will receive your editable PDF file via email. Download it to your computer (we recommend not editing in the browser). <a href="https://res.cloudinary.com/weddingempress/image/upload/v1520042501/sample-placecard.pdf" target="_blank" class="uk-button buy uk-button-small uk-button-default">
+              View/Print a sample
+            </a>
           </li>
           <li>
             Then, type in the names and table assignments. <br />Or purchase our &ensp;{% assign automate = site.categories.placecards | where: "title", "Automate Add On" %}
-            <button class="snipcart-add-item uk-button buy uk-button-small uk-button-default"
-                data-item-id="{{ automate.product-id }}"
-                data-item-name="{{ automate.title }}"
-                data-item-price='{{ automate.product-price}}'
-                data-item-url="{{ site.url }}{{ automate.url }}"
-                data-item-file-guid="{{ automate.product-download-id }}"
-                data-item-description="{{ automate.description}}">
+            <a href="{{ site.url }}/wedding/placecards/automate-add-on/" class="uk-button buy uk-button-small uk-button-default">
                     Automate Add On
-            </button>&ensp;
+            </a>&ensp;
              and The Empress will add your guests for you and send you the generated PDF files for you to print.
           </li>
           <li>
