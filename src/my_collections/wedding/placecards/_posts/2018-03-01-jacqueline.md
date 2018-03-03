@@ -3,7 +3,7 @@ title: Jacqueline
 images:
   - jacqueline-black.png
   - jacqueline-gold.png
-description: description  
+description: Jacqueline placecard  
 product-id: jacqueline
 product-price: 5.00
 button-text:

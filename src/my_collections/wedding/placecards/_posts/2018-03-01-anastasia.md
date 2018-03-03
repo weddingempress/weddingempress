@@ -3,7 +3,7 @@ title: Anastasia
 images:
   - anastasia-black.png
   - anastasia-gold.png
-description: description  
+description: Anastasia placecard
 product-id: anastasia
 product-price: 5.00
 button-text:

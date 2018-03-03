@@ -3,7 +3,7 @@ title: Josephine
 images:
   - josephine-black.png
   - josephine-gold.png
-description: description  
+description: Josephine placecard  
 product-id: josephine
 product-price: 5.00
 button-text:

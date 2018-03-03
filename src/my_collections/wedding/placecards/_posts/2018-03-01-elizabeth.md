@@ -3,7 +3,7 @@ title: Elizabeth
 images:
   - elizabeth-black.png
   - elizabeth-gold.png
-description: description  
+description: Elizabeth placecard
 product-id: elizabeth
 product-price: 5.00
 button-text:

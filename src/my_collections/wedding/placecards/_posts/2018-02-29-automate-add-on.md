@@ -2,7 +2,7 @@
 title: Automate Add On
 images:
   - automate.png
-description:
+description: Automate add-on
 product-id: automate-add-on
 product-price: 5.00
 button-text:
