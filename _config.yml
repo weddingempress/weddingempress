@@ -142,7 +142,7 @@ defaults:
       is-post: true
       comments: false
       comments-locked: true
-      permalink: /:year/wedding/placecards/:title/
+      permalink: /:year/wedding/place-card-template/:title/
 
   -
     scope:
