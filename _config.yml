@@ -142,13 +142,14 @@ defaults:
       is-post: true
       comments: false
       comments-locked: true
+      permalink: /:year/wedding/placecards/:title/
 
   -
     scope:
       path: "blog/_posts"      # empty string for all files
     values:
       layout: post
-      permalink:  blog/:year/:month/:title
+      permalink:  blog/:year/:month/:title/
       is-post: true
       comments: false
       comments-locked: true
