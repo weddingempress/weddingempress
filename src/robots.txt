@@ -2,6 +2,6 @@
 
 # Allow crawling of all content
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://weddingempress.com/sitemap.xml
 Disallow: /admin/*
 Disallow: /thank-you/
