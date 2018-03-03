@@ -1,5 +1,5 @@
 ---
-title: Automate Add On
+title: Automate
 images:
   - automate.png
 description: Automate add-on
