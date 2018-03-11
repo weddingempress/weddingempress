@@ -1,3 +1,7 @@
 {% for image in page.images %}
+{% unless forloop.index == 1 or forloop.index == 2 %}
+<div class="uk-margin-medium-bottom">
 <img src="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,f_auto,q_auto:best,w_800/{{ image }}" srcset="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_320/{{ image }} 320w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_640/{{ image }} 640w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_960/{{ image }} 960w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_1100/{{ image }} 1100w" sizes="(min-width: 50rem) 50rem, 90vw" class="featured-image" alt="{{ image-alt }}" width="1100" height="732" />
+</div>
+{% endunless %}
 {% endfor %}
