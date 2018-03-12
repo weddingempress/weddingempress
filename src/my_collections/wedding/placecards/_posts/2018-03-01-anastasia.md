@@ -12,7 +12,7 @@ images:
 description: Anastasia placecard
 product-id: anastasia
 product-price: 5
-product-download-id: e911dbe1-e582-495e-8c8a-b6ee9c1dee3a
+product-download-id: 8499a94d-315d-4777-bab1-17f320e180cf
 ---
 Anastasia is a sweet printable and editable placecard template that comes in black and white and faux gold foil.
 
