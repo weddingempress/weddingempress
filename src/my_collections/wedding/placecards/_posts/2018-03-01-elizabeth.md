@@ -2,7 +2,13 @@
 title: Elizabeth
 date: '2018-03-11 12:00:00'
 images:
-  - ''
+  - elizabeth-black.png
+  - elizabeth-gold.png
+  - elizabeth-black-and-gold-place-card-template.png
+  - elizabeth-black-place-card-on-table.png
+  - elizabeth-gold-place-card-on-table.png
+  - elizabeth-black-place-card-template-pdf-preview.png
+  - elizabeth-gold-place-card-template-pdf-preview.png
 description: Elizabeth placecard
 product-id: elizabeth
 product-price: 5
