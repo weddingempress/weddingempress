@@ -1,55 +1,65 @@
 <div>
   <main class="uk-width-5-6@xl uk-child-width-1-3@xl" uk-grid>
-<div class="uk-width-1-1">
-        <h1>Printable Placecards <em class="lowercase">for</em> <br />Weddings, Parties, and Special Events</h1>
-</div>
-
-
-
-    {% assign placecards = site.categories.placecards %}
-  {% for placecard in placecards %}
-    <div>
-      <a href="{{ placecard.url }}">
-
-        {% if placecard.title == "Automate" %}
-
-        <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
-            <img src="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,f_auto,q_auto:best,w_800/{{ placecard.images[0] }}" srcset="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_320/{{ placecard.images[0] }} 320w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_640/{{ placecard.images[0] }} 640w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_960/{{ placecard.images[0] }} 960w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_1100/{{ placecard.images[0] }} 1100w" sizes="(min-width: 50rem) 50rem, 90vw" class="featured-image" alt="{{ placecard.image-alt }}" width="1100" height="732" />
-            <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
-               <p class="uk-h4 uk-margin-remove italic automate">Even easier!<br />We will add your guest names for you. <br />Send your spreadsheet and get PDFs sent to you.</p>
-           </div>
-    </div>
-    {% else %}
-
-        <div class="uk-text-center">
-       <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-           <img src="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,f_auto,q_auto:best,w_800/{{ placecard.images[0] }}" srcset="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_320/{{ placecard.images[0] }} 320w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_640/{{ placecard.images[0] }} 640w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_960/{{ placecard.images[0] }} 960w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_1100/{{ placecard.images[0] }} 1100w" sizes="(min-width: 50rem) 50rem, 90vw" class="featured-image" alt="{{ placecard.image-alt }}" width="1100" height="732" />
-
-           <img class="uk-transition-fade uk-position-cover" src="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,f_auto,q_auto:best,w_800/{{ placecard.images[1] }}" srcset="https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_320/{{ placecard.images[1]  }} 320w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_640/{{ placecard.images[1]  }} 640w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_960/{{ placecard.images[1]  }} 960w, https://res.cloudinary.com/{{ site.cloudinary-name }}/image/upload/c_limit,q_auto:best,w_1100/{{ placecard.images[1]  }} 1100w" sizes="(min-width: 50rem) 50rem, 90vw" alt="{{ placecard.image-alt }}" width="1100" height="732" />
-       </div>
-   </div>
-
-    {% endif %}
-      </a>
-      <div class="uk-flex uk-margin-top uk-flex-between">
-
-      <p>
-        {% if placecard.title == "Automate" %}
-        <i class="fas fa-cog fa-spin"></i>&ensp;
-        {% endif %}
-        {{ placecard.title }}&emsp;<span class="price"><sup>$</sup>{{ placecard.product-price | remove: ".0" }}<sup>.00</sup></span>
+    <div class="uk-width-2-3">
+      <h1 class="">Your Vision. Your Way.</h1>
+      <p>Need personalized wedding invitation design? Get the look you love. We pair your favorite illustrations with writing set in beautiful typography. You receive professional design files ready to print at home or through your selected print service.
       </p>
-      <button class="snipcart-add-item uk-button buy uk-button-small uk-button-secondary"
-          data-item-id="{{ placecard.product-id }}"
-          data-item-name="{{ placecard.title }}"
-          data-item-price='{{ placecard.product-price}}'
-          data-item-url="{{ site.url }}{{ placecard.url }}"
-          data-item-file-guid="{{ placecard.product-download-id }}"
-          data-item-description="{{ placecard.description}}">
-              Add
-      </button>
     </div>
+    <div class="uk-width-1-3">
+
     </div>
-  {% endfor %}
+
+    <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+      <img src="" alt="" />
+      <h2>Illustrations</h2>
+      <p>Select your favorite vector illustrations, patterns, and design elements from <a>Freepik</a> to create your wedding look. Search for <a>lace</a>, <a>floral</a>, <a>art deco</a>, or <a>search your own keyword</a> to be inspired.*</p>
+      <p class="small indent">*Images are licensed to Wedding Empress for creating personalized wedding invitations for individual customers (print-ready PDF files).</p>
+    </div>
+    <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+      <img src="" alt="" />
+      <h2>Production</h2>
+      <p>Choose custom dimensions, request setup for custom diecut and more. Tell us what you need.</p>
+    </div>
+    <div class="uk-width-1-1  uk-text-center">
+      <h2 class="uk-h1">Our Services</h2>
+    </div>
+
+    <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+      <div class="product-highlight product-padding">
+      <h3 class="uk-text-center uk-margin-remove">Wedding Invitation Set</h3>
+      <hr class="uk-divider-small uk-text-center" />
+            <button class="uk-align-center uk-button uk-button-primary"><sup>$</sup>75&ensp;Buy Now</button>
+      <hr class="uk-divider-small uk-text-center " />
+      <p>Your personalized wedding invitation set ready to print at home or via print service including:</p>
+      <ul class="uk-list uk-list-divider">
+        <li>Personalized save-the-date card.&ensp;<i class="far fa-file-pdf"></i></li>
+        <li>Personalized wedding invitation.&ensp;<i class="far fa-file-pdf"></i></li>
+        <li>Personalized RSVP card.&ensp;<i class="far fa-file-pdf"></i></li>
+        <li>Personalized wedding details card.&ensp;<i class="far fa-file-pdf"></i></li>
+        <li>Your chosen illustrations and design elements.</li>
+        <li>Your writing set in beautiful typography.</li>
+        <li>Any personalization choices including fonts, color-palettes, custom dimensions etc.</li>
+        <li>Custom print-production file-setup for advanced features such as diecut, embossing, gold foil, etc.</li>
+        <li>Unlimited file revisions.</li>
+      </ul>
+        </div>
+    </div>
+    <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+      <div class="product-padding">
+      <h3 class="uk-text-center uk-margin-remove">Save the Date</h3>
+      <hr class="uk-divider-small uk-text-center" />
+      <button class="uk-align-center uk-button uk-button-secondary"><sup>$</sup>50&ensp;Buy Now</button>
+      <hr class="uk-divider-small uk-text-center" />
+      <p>Your personalized save-the-date card ready to print at home or via print service including:</p>
+      <ul class="uk-list uk-list-divider">
+        <li>Personalized save-the-date card.&ensp;<i class="far fa-file-pdf"></i></li>
+        <li>Your chosen illustrations and design elements.</li>
+        <li>Your writing set in beautiful typography.</li>
+        <li>Any personalization choices including fonts, color-palettes, custom dimensions etc.</li>
+        <li>Custom print-production file-setup for advanced features such as diecut, embossing, gold foil, etc.</li>
+        <li>Unlimited file revisions.</li>
+      </ul>
+    </div>
+</div>
   </main>
 </div>

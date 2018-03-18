@@ -7,13 +7,16 @@ a:hover,
 a:link,
 a:visited {
   text-decoration: none;
-  color: black;
+  color: $black;
+}
+.uk-link, a {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-
-p, .services, .uk-accordion-content,
-ul.related-posts,
-#respond {
+p, .uk-accordion-content {
+  a,
   a:hover,
   a:link,
   a:visited {
